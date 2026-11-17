@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FROGet｜designer survival guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Post+No+Bills+Colombo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 導覽列 -->
+  <header class="nav">
+    <a class="logo" href="index.html">
+      <span class="logo-line1"><span class="logo-name">FROGet</span> <span class="logo-sub">to self-care</span></span>
+      <span class="logo-line2">designer survival guide</span>
+    </a>
+    <nav class="menu">
+      <a href="ask.html">問答</a>
+      <a href="#">商店</a>
+      <a href="#">解壓遊戲</a>
+      <a href="#about">關於我們</a>
+      <a class="cart-button" href="#">購物車 (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 主標區 -->
+    <section class="hero container">
+      <h1 class="hero-title">小痛纏身，需多注意。<br>小病難察，何時聞「鳴」</h1>
+      <p class="hero-intro">本網站聚焦於設計師常見的三大身體負擔：「眼睛、內臟、手臂」<br>探討不良工作習慣引發的身體不適，並提供</p>
+      <ul class="tag-row">
+        <li class="tag">常見症狀</li>
+        <li class="tag">成因分析</li>
+        <li class="tag">日常保養</li>
+        <li class="tag">舒緩方法</li>
+        <li class="tag tag-warning">就醫警訊</li>
+      </ul>
+      <p class="hero-desc">協助設計工作者建立健康意識，及早預防並妥善應對身體問題。</p>
+    </section>
+
+    <!-- 青蛙主視覺（可點擊部位） -->
+    <section class="frog-stage" id="frog-stage">
+      <div class="frog-stage-inner" id="frog-stage-inner">
+        <img class="frog-img" src="img/frog-main.png" alt="趴在電腦桌前的青蛙設計師">
+
+        <!-- 提示文字與箭頭 -->
+        <p class="hint-text" style="left:1007px; top:72px;">click me !</p>
+        <p class="hint-text" style="left:1290px; top:293px;">click me !</p>
+        <p class="hint-text" style="left:663px; top:686px;">click me !</p>
+        <div class="hint-arrow" style="left:984px; top:87px; width:23px; height:67px;">
+          <img src="img/hint-arrow-1.svg" alt="" style="width:70.838px; transform:rotate(108.95deg);">
+        </div>
+        <div class="hint-arrow" style="left:1194px; top:308px; width:96px; height:107px;">
+          <img src="img/hint-arrow-2.svg" alt="" style="width:143.753px; transform:rotate(131.9deg);">
+        </div>
+        <div class="hint-arrow" style="left:663px; top:502px; width:237px; height:169px;">
+          <img src="img/hint-arrow-3.svg" alt="" style="width:291.084px; transform:rotate(-35.49deg);">
+        </div>
+
+        <!-- 身體部位按鈕 -->
+        <button class="body-button" data-part="eye" style="left:866px; top:139px; width:151px; height:151px;" aria-label="眼睛常見症狀">
+          <img src="img/btn-eye-default.png" data-default="img/btn-eye-default.png" data-active="img/btn-eye-active.png" alt="">
+        </button>
+        <button class="body-button" data-part="arm" style="left:1089px; top:367px; width:174px; height:216px;" aria-label="手臂常見症狀">
+          <img src="img/btn-arm-default.png" data-default="img/btn-arm-default.png" data-active="img/btn-arm-active.png" alt="">
+        </button>
+        <button class="body-button" data-part="organ" style="left:884px; top:438px; width:81px; height:81px;" aria-label="內臟常見症狀">
+          <img src="img/btn-heart-default.png" data-default="img/btn-heart-default.png" data-active="img/btn-heart-active.png" alt="">
+        </button>
+
+        <!-- 症狀對話框：眼睛 -->
+        <div class="popout" data-popout="eye" style="left:1027px; top:78px;">
+          <img class="popout-bubble" src="img/popout-bubble.svg" alt="">
+          <span class="chip-title" style="left:44px; top:16px;">常見症狀</span>
+          <span class="chip" style="left:111.5px; top:85.2px; --r:-7.5deg;">眼睛乾澀</span>
+          <span class="chip" style="left:241.2px; top:78px; --r:13deg;">酸脹疲勞</span>
+          <span class="chip" style="left:102.7px; top:147.6px; --r:10deg;">視力模糊</span>
+          <span class="chip" style="left:200.5px; top:130.4px; --r:-17deg;">頭痛</span>
+          <span class="chip" style="left:255.3px; top:170.6px; --r:-6deg;">畏光刺痛</span>
+        </div>
+
+        <!-- 症狀對話框：手臂 -->
+        <div class="popout" data-popout="arm" style="left:1273px; top:390px;">
+          <img class="popout-bubble" src="img/popout-bubble.svg" alt="">
+          <span class="chip-title" style="left:44px; top:16px;">常見症狀</span>
+          <span class="chip" style="left:111.5px; top:85.2px; --r:-7.5deg;">手腕痠痛</span>
+          <span class="chip" style="left:239.4px; top:80.4px; --r:14deg;">滑鼠手</span>
+          <span class="chip" style="left:104.8px; top:146.4px; --r:10deg;">肌腱炎</span>
+          <span class="chip" style="left:199.8px; top:130.3px; --r:-18deg;">肩頸痠痛</span>
+          <span class="chip" style="left:255.3px; top:170.6px; --r:-6deg;">手臂痠痛</span>
+        </div>
+
+        <!-- 症狀對話框：內臟（尾巴在右側，所以放在愛心左邊） -->
+        <div class="popout" data-popout="organ" style="left:566px; top:438px;">
+          <img class="popout-bubble popout-bubble-flip" src="img/popout-bubble-organ.svg" alt="">
+          <span class="chip-title" style="left:17px; top:14px;">常見症狀</span>
+          <span class="chip" style="left:82.4px; top:81.8px; --r:-9deg;">胃食道逆流</span>
+          <span class="chip" style="left:211.4px; top:77.5px; --r:16deg;">脹氣｜消化不良</span>
+          <span class="chip" style="left:73.9px; top:147.1px; --r:9deg;">便祕</span>
+          <span class="chip" style="left:171.5px; top:128.4px; --r:-17deg;">心悸</span>
+          <span class="chip" style="left:226.4px; top:170.3px; --r:6deg;">痔瘡</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 身體部位卡片 -->
+    <section class="cards-section container">
+      <h2 class="cards-heading">別忽視了身體傳遞的訊息！<span>點擊獲得更多資訊</span></h2>
+      <div class="card-row">
+        <a class="body-card" href="eye-detail.html">
+          <div class="card-main">
+            <div class="card-illustration">
+              <img class="icon-default" src="img/card-icon-eye-default.png" alt="">
+              <img class="icon-hover" src="img/card-icon-eye-hover.png" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">眼睛</h3>
+              <p class="card-desc">盯螢幕太久最常出現的狀況</p>
+              <p class="card-label">常見症狀</p>
+              <ul class="symptoms">
+                <li>眼睛乾澀</li>
+                <li>酸脹疲勞</li>
+                <li>視力模糊</li>
+                <li>頭痛</li>
+                <li>畏光刺癢</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span>5 種常見症狀</span>
+            <span class="go-button">
+              <img class="icon-default" src="img/go-button-default.svg" alt="">
+              <img class="icon-hover" src="img/go-button-hover.svg" alt="">
+            </span>
+          </div>
+        </a>
+
+        <a class="body-card" href="organ-detail.html">
+          <div class="card-main">
+            <div class="card-illustration">
+              <img class="icon-default" src="img/card-icon-organ-default.png" alt="">
+              <img class="icon-hover" src="img/card-icon-organ-hover.png" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">內臟</h3>
+              <p class="card-desc">久坐與不規律飲食的負擔</p>
+              <p class="card-label">常見症狀</p>
+              <ul class="symptoms">
+                <li>胃食道逆流</li>
+                <li>胃脹氣、消化不良</li>
+                <li>便祕</li>
+                <li>心悸</li>
+                <li>痔瘡</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span>5 種常見症狀</span>
+            <span class="go-button">
+              <img class="icon-default" src="img/go-button-default.svg" alt="">
+              <img class="icon-hover" src="img/go-button-hover.svg" alt="">
+            </span>
+          </div>
+        </a>
+
+        <a class="body-card" href="arm-detail.html">
+          <div class="card-main">
+            <div class="card-illustration">
+              <img class="icon-default" src="img/card-icon-arm-default.png" alt="">
+              <img class="icon-hover" src="img/card-icon-arm-hover.png" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">手臂</h3>
+              <p class="card-desc">長時間操作滑鼠的負擔</p>
+              <p class="card-label">常見症狀</p>
+              <ul class="symptoms">
+                <li>手腕痠痛</li>
+                <li>滑鼠手</li>
+                <li>肌腱炎</li>
+                <li>肩頸痠痛</li>
+                <li>手臂痠痛</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span>5 種常見症狀</span>
+            <span class="go-button">
+              <img class="icon-default" src="img/go-button-default.svg" alt="">
+              <img class="icon-hover" src="img/go-button-hover.svg" alt="">
+            </span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 免責聲明 -->
+    <section class="disclaimer">
+      <p>本網站旨在提供設計工作者面對日常身體不適時的初步應對與舒緩資訊，協助使用者了解常見症狀及適當的自我照護方式。</p>
+      <p>網站內容僅供健康知識參考，並非醫療診斷或治療建議，亦不鼓勵自行診斷或用藥。若症狀持續、反覆發生或出現警示徵兆，應及時尋求專業醫療協助，以免延誤就醫。</p>
+    </section>
+
+    <!-- 關於我們 -->
+    <section class="about" id="about">
+      <h2 class="about-title">ABOUT US</h2>
+      <div class="about-text">
+        <p>FROG OFF™ 是一個以設計師健康為核心的品牌。</p>
+        <p>品牌名稱結合了「FROG（青蛙）」與「OFF（關閉、停止）」兩個概念。青蛙象徵每一位長時間埋首於設計工作設計師，而 OFF 則代表暫停工作、關閉電腦，重新關注自己的身體。</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
