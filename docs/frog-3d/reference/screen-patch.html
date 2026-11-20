@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>青蛙貼布｜貼在畫面任何地方</title>
+<style>
+  /* 以下只是示意用的假網站內容，貼布功能本身在 screenPatch.js */
+  body { margin:0; font-family:system-ui,'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif; color:#3b2330; background:#fff; }
+  header { position:sticky; top:0; display:flex; justify-content:space-between; align-items:center; padding:14px 28px;
+    background:#ffffffee; backdrop-filter:blur(6px); border-bottom:1px solid #f0dbe3; z-index:5; }
+  header b { letter-spacing:.25em; font-weight:500; }
+  header nav { display:flex; gap:20px; font-size:14px; color:#7a5566; }
+  .hero { height:72vh; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+    background:linear-gradient(#eac5d1,#e884a2); color:#fff; text-align:center; }
+  .hero h1 { margin:0; font-size:clamp(40px,7vw,84px); font-weight:300; letter-spacing:.06em; }
+  .hero p { margin:0; opacity:.9; }
+  .tip { display:inline-block; margin-top:14px; background:#ffffffd9; color:#a03a62; padding:8px 16px; border-radius:999px; font-size:14px; }
+  section { max-width:980px; margin:0 auto; padding:70px 28px; }
+  h2 { color:#e2557f; font-size:28px; margin:0 0 22px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+  .card { border:1px solid #f0dbe3; border-radius:16px; padding:22px; min-height:120px; }
+  .card .n { font-size:46px; color:#9bd64a; font-weight:300; }
+  .band { background:linear-gradient(#f7fbe9,#d9f39b); }
+  .row { display:flex; gap:28px; align-items:center; flex-wrap:wrap; }
+  .box { flex:1 1 280px; height:260px; border-radius:18px; background:#f4eef1; display:flex; align-items:center; justify-content:center; color:#a58b97; }
+  .text { flex:1 1 280px; line-height:1.9; }
+  footer { padding:40px 28px; color:#a58b97; font-size:13px; text-align:center; }
+</style>
+</head>
+<body>
+<header><b>FROGet</b><nav><span>首頁</span><span>衛教</span><span>放鬆遊戲</span><span>搞怪頁面</span></nav></header>
+<div class="hero">
+  <h1>welcome</h1>
+  <p>哪裡痛就貼哪裡</p>
+  <span class="tip">從右下角的貼布盒拖一片出來，貼在畫面任何地方試試</span>
+</div>
+<section>
+  <h2>數字會說話</h2>
+  <div class="cards">
+    <div class="card"><div class="n">0.3 秒</div>平均痛感轉移時間</div>
+    <div class="card"><div class="n">30 小時</div>單片持續轉移</div>
+    <div class="card"><div class="n">3 秒</div>撕下不留痕跡</div>
+    <div class="card"><div class="n">3 層</div>特殊複合材料</div>
+  </div>
+</section>
+<div class="band"><section>
+  <h2>貼上去，疼痛就不是你的了</h2>
+  <div class="row"><div class="box">商品圖</div>
+    <div class="text">這裡是示意文字。痛的地方可以是肩膀、腰、你的期末報告，或是你剛打開的股票 App。把貼布貼上去，綠色光波一擴散，痛就轉移到別人身上了。</div></div>
+</section></div>
+<section>
+  <h2>四層構造，由下往上把痛送走</h2>
+  <div class="row"><div class="text">示意段落：白色外層、綠色凸點層、藍色電路層、白色底層。往下捲動，貼好的貼布會跟著網頁內容一起移動。</div><div class="box">分層動畫</div></div>
+</section>
+<footer>FROGet to self-care ｜ 本頁為示意</footer>
+
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+<script type="module">
+import { createScreenPatch } from '../../../js/screenPatch.js';
+const sp = createScreenPatch();
+window.__sp = sp;
+// 光感樣式定案：A 霓虹光環（screenPatch.js 的預設值 waveStyle: 'neon'）
+</script>
+</body>
+</html>
