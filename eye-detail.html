@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>眼睛｜FROGet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Post+No+Bills+Colombo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/detail.css">
+  <!-- 全站共用樣式（跟首頁同一套）＋詳細頁換裝 -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/detail-theme.css">
+</head>
+<body class="theme-line">
+
+  <!-- 導覽列 -->
+  <header class="nav">
+    <a class="logo" href="index.html">
+      <span class="logo-line1"><span class="logo-name">FROGet</span></span>
+    </a>
+    <nav class="menu">
+      <a href="ask.html">問答</a>
+      <a href="shop.html">商店</a>
+      <a href="game.html">解壓遊戲</a>
+      <a href="index.html#about">關於我們</a>
+      <a class="cart-button" href="#">購物車 (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <!-- 頁面標題 -->
+  <div class="detail-head">
+    <p class="t-label" data-reveal>( 身體地圖 · 01 )</p>
+    <h1 class="t-display" data-reveal="0.08">眼睛</h1>
+  </div>
+
+  <main class="detail">
+    <!-- 左側症狀選單 -->
+    <nav class="symptom-nav" aria-label="症狀" data-reveal="0.15">
+      <p class="t-label">( 5 種症狀 )</p>
+      <button class="symptom-nav-item" type="button">眼睛乾澀</button>
+      <button class="symptom-nav-item" type="button">酸脹｜疲勞</button>
+      <button class="symptom-nav-item" type="button">視力模糊</button>
+      <button class="symptom-nav-item" type="button">頭痛</button>
+      <button class="symptom-nav-item" type="button">畏光｜刺癢</button>
+    </nav>
+
+    <!-- 右側內容面板 -->
+    <section class="detail-panel line-draw" data-reveal="0.22">
+      <div class="panel-header" id="panel-header">
+        <h1 class="panel-title" id="panel-title">眼睛乾澀</h1>
+      </div>
+
+      <div class="section-tabs" role="tablist">
+        <button class="tag" type="button" role="tab" data-section="symptoms">常見症狀</button>
+        <button class="tag" type="button" role="tab" data-section="causes">成因分析</button>
+        <button class="tag" type="button" role="tab" data-section="relief">舒緩方法</button>
+        <button class="tag" type="button" role="tab" data-section="care">日常保養</button>
+        <button class="tag tag-warning" type="button" role="tab" data-section="warning">就醫警訊</button>
+      </div>
+
+      <div class="panel-content">
+
+        <!-- ========== 症狀 1：眼睛乾澀 ========== -->
+        <article class="symptom-content">
+          <div class="section-content" data-section="symptoms">
+            <h2 class="content-label">症狀描述</h2>
+            <p class="content-lead">眼睛乾燥、異物感、刺痛，容易感到不舒服</p>
+            <div class="quick-look">
+              <button class="quick-card" type="button" data-goto="causes">
+                <span class="quick-top"><span class="quick-eyebrow">可能原因</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">盯螢幕時眨眼次數減少，淚液容易蒸發</span>
+              </button>
+              <button class="quick-card" type="button" data-goto="relief">
+                <span class="quick-top"><span class="quick-eyebrow">最快的舒緩</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">人工淚液</span>
+              </button>
+            </div>
+          </div>
+          <div class="section-content" data-section="causes">
+            <h2 class="content-label">為什麼會這樣？</h2>
+            <p class="content-lead">盯螢幕時眨眼次數減少，淚液容易蒸發</p>
+          </div>
+          <div class="section-content" data-section="relief">
+            <h2 class="content-label">可以先這樣做</h2>
+            <div class="relief-grid">
+              <div class="relief-card"><span class="item-no">01</span><h3 class="relief-name">人工淚液</h3><p class="relief-how">使用不含防腐劑的人工淚液，補充眼睛水分。</p></div>
+              <div class="relief-card"><span class="item-no">02</span><h3 class="relief-name">刻意眨眼</h3><p class="relief-how">緩慢、完整地眨眼數次，幫助淚液均勻分布。</p></div>
+              <div class="relief-card"><span class="item-no">03</span><h3 class="relief-name">溫熱敷眼</h3><p class="relief-how">閉眼後以溫熱毛巾敷眼約 5～10 分鐘。</p></div>
+              <div class="relief-card"><span class="item-no">04</span><h3 class="relief-name">暫停用眼</h3><p class="relief-how">暫時離開螢幕，讓眼睛休息。</p></div>
+            </div>
+          </div>
+          <div class="section-content" data-section="care">
+            <h2 class="content-label">平常就做的護眼習慣</h2>
+            <ul class="care-list">
+              <li><span class="item-no">01</span><p class="care-text">遵守 20-20-20 原則：每看螢幕 20 分鐘，看 20 英尺（約 6 公尺）遠處 20 秒。</p></li>
+              <li><span class="item-no">02</span><p class="care-text">有意識地增加眨眼頻率。</p></li>
+              <li><span class="item-no">03</span><p class="care-text">調整螢幕亮度，避免環境太暗或反光。</p></li>
+              <li><span class="item-no">04</span><p class="care-text">保持適當觀看距離，避免螢幕過近。</p></li>
+              <li><span class="item-no">05</span><p class="care-text">眼睛乾澀時，可考慮使用不含防腐劑的人工淚液。</p></li>
+            </ul>
+          </div>
+          <div class="section-content" data-section="warning">
+            <h2 class="content-label">以下情況不建議自行舒緩後繼續工作：</h2>
+            <div>
+              <div class="warning-head"><span>警訊</span><span>建議處理</span></div>
+              <ul class="warning-list">
+                <li><span class="item-no">01</span><p class="warn-text">乾澀持續數週，反覆影響工作與生活</p><span class="badge badge-check">安排檢查</span></li>
+                <li><span class="item-no">02</span><p class="warn-text">規律保養一個月仍未改善</p><span class="badge badge-check">安排檢查</span></li>
+                <li><span class="item-no">03</span><p class="warn-text">眼睛持續發紅、疼痛或分泌物增加</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">04</span><p class="warn-text">畏光合併視力下降或劇烈眼痛</p><span class="badge badge-doctor">立即就醫</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== 症狀 2：酸脹｜疲勞 ========== -->
+        <article class="symptom-content">
+          <div class="section-content" data-section="symptoms">
+            <h2 class="content-label">症狀描述</h2>
+            <p class="content-lead">眼睛有酸澀、沉重、疲倦或緊繃感</p>
+            <div class="quick-look">
+              <button class="quick-card" type="button" data-goto="causes">
+                <span class="quick-top"><span class="quick-eyebrow">可能原因</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">長時間近距離用眼，眼睛持續調節焦距</span>
+              </button>
+              <button class="quick-card" type="button" data-goto="relief">
+                <span class="quick-top"><span class="quick-eyebrow">最快的舒緩</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">遠眺放鬆</span>
+              </button>
+            </div>
+          </div>
+          <div class="section-content" data-section="causes">
+            <h2 class="content-label">為什麼會這樣？</h2>
+            <p class="content-lead">長時間近距離用眼，眼睛持續調節焦距</p>
+          </div>
+          <div class="section-content" data-section="relief">
+            <h2 class="content-label">可以先這樣做</h2>
+            <div class="relief-grid">
+              <div class="relief-card"><span class="item-no">01</span><h3 class="relief-name">遠眺放鬆</h3><p class="relief-how">看向約 6 公尺外的景物，持續 20 秒。</p></div>
+              <div class="relief-card"><span class="item-no">02</span><h3 class="relief-name">閉眼休息</h3><p class="relief-how">暫時閉眼 1～2 分鐘，減少視覺刺激。</p></div>
+              <div class="relief-card"><span class="item-no">03</span><h3 class="relief-name">調整螢幕</h3><p class="relief-how">降低過亮的螢幕光線，避免反光。</p></div>
+              <div class="relief-card"><span class="item-no">04</span><h3 class="relief-name">放鬆眼部</h3><p class="relief-how">避免持續近距離盯著螢幕或手機。</p></div>
+            </div>
+          </div>
+          <div class="section-content" data-section="care">
+            <h2 class="content-label">平常就做的護眼習慣</h2>
+            <ul class="care-list">
+              <li><span class="item-no">01</span><p class="care-text">遵守 20-20-20 原則：每看螢幕 20 分鐘，看 20 英尺（約 6 公尺）遠處 20 秒。</p></li>
+              <li><span class="item-no">02</span><p class="care-text">有意識地增加眨眼頻率。</p></li>
+              <li><span class="item-no">03</span><p class="care-text">調整螢幕亮度，避免環境太暗或反光。</p></li>
+              <li><span class="item-no">04</span><p class="care-text">保持適當觀看距離，避免螢幕過近。</p></li>
+              <li><span class="item-no">05</span><p class="care-text">眼睛乾澀時，可考慮使用不含防腐劑的人工淚液。</p></li>
+            </ul>
+          </div>
+          <div class="section-content" data-section="warning">
+            <h2 class="content-label">以下情況不建議自行舒緩後繼續工作：</h2>
+            <div>
+              <div class="warning-head"><span>警訊</span><span>建議處理</span></div>
+              <ul class="warning-list">
+                <li><span class="item-no">01</span><p class="warn-text">充分休息後仍持續酸脹不適</p><span class="badge badge-check">安排檢查</span></li>
+                <li><span class="item-no">02</span><p class="warn-text">眼睛疲勞反覆發生，影響日常工作</p><span class="badge badge-check">安排檢查</span></li>
+                <li><span class="item-no">03</span><p class="warn-text">突然眼睛劇痛、充血並伴隨視力模糊</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">04</span><p class="warn-text">眼脹合併頭痛、噁心或嘔吐</p><span class="badge badge-doctor">立即就醫</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== 症狀 3：視力模糊 ========== -->
+        <article class="symptom-content">
+          <div class="section-content" data-section="symptoms">
+            <h2 class="content-label">症狀描述</h2>
+            <p class="content-lead">視線短暫變得不清楚，影像難以聚焦</p>
+            <div class="quick-look">
+              <button class="quick-card" type="button" data-goto="causes">
+                <span class="quick-top"><span class="quick-eyebrow">可能原因</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">長時間近距離工作，造成調節疲勞</span>
+              </button>
+              <button class="quick-card" type="button" data-goto="relief">
+                <span class="quick-top"><span class="quick-eyebrow">最快的舒緩</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">停止近距離用眼</span>
+              </button>
+            </div>
+          </div>
+          <div class="section-content" data-section="causes">
+            <h2 class="content-label">為什麼會這樣？</h2>
+            <p class="content-lead">長時間近距離工作，造成調節疲勞</p>
+          </div>
+          <div class="section-content" data-section="relief">
+            <h2 class="content-label">可以先這樣做</h2>
+            <div class="relief-grid">
+              <div class="relief-card"><span class="item-no">01</span><h3 class="relief-name">停止近距離用眼</h3><p class="relief-how">暫停電腦及手機操作。</p></div>
+              <div class="relief-card"><span class="item-no">02</span><h3 class="relief-name">遠距離凝視</h3><p class="relief-how">將視線轉向遠方，讓眼睛放鬆。</p></div>
+              <div class="relief-card"><span class="item-no">03</span><h3 class="relief-name">完整眨眼</h3><p class="relief-how">連續自然眨眼，改善淚膜不穩定造成的模糊。</p></div>
+              <div class="relief-card"><span class="item-no">04</span><h3 class="relief-name">確認眼鏡度數</h3><p class="relief-how">若經常發生，應安排視力及眼睛檢查。</p></div>
+            </div>
+          </div>
+          <div class="section-content" data-section="care">
+            <h2 class="content-label">平常就做的護眼習慣</h2>
+            <ul class="care-list">
+              <li><span class="item-no">01</span><p class="care-text">遵守 20-20-20 原則：每看螢幕 20 分鐘，看 20 英尺（約 6 公尺）遠處 20 秒。</p></li>
+              <li><span class="item-no">02</span><p class="care-text">有意識地增加眨眼頻率。</p></li>
+              <li><span class="item-no">03</span><p class="care-text">調整螢幕亮度，避免環境太暗或反光。</p></li>
+              <li><span class="item-no">04</span><p class="care-text">保持適當觀看距離，避免螢幕過近。</p></li>
+              <li><span class="item-no">05</span><p class="care-text">眼睛乾澀時，可考慮使用不含防腐劑的人工淚液。</p></li>
+            </ul>
+          </div>
+          <div class="section-content" data-section="warning">
+            <h2 class="content-label">以下情況不建議自行舒緩後繼續工作：</h2>
+            <div>
+              <div class="warning-head"><span>警訊</span><span>建議處理</span></div>
+              <ul class="warning-list">
+                <li><span class="item-no">01</span><p class="warn-text">視力模糊反覆發生或持續未改善</p><span class="badge badge-check">安排檢查</span></li>
+                <li><span class="item-no">02</span><p class="warn-text">突然單眼視力下降或短暫看不見</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">03</span><p class="warn-text">視野出現黑幕、陰影或缺損</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">04</span><p class="warn-text">突然視力異常合併單側無力、口齒不清</p><span class="badge badge-119">撥打 119</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== 症狀 4：頭痛 ========== -->
+        <article class="symptom-content">
+          <div class="section-content" data-section="symptoms">
+            <h2 class="content-label">症狀描述</h2>
+            <p class="content-lead">頭部或兩眉之間出現悶痛、緊繃或痠脹感</p>
+            <div class="quick-look">
+              <button class="quick-card" type="button" data-goto="causes">
+                <span class="quick-top"><span class="quick-eyebrow">可能原因</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">用眼過度、螢幕眩光或度數不合適</span>
+              </button>
+              <button class="quick-card" type="button" data-goto="relief">
+                <span class="quick-top"><span class="quick-eyebrow">最快的舒緩</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">暫停螢幕工作</span>
+              </button>
+            </div>
+          </div>
+          <div class="section-content" data-section="causes">
+            <h2 class="content-label">為什麼會這樣？</h2>
+            <p class="content-lead">用眼過度、螢幕眩光或度數不合適</p>
+          </div>
+          <div class="section-content" data-section="relief">
+            <h2 class="content-label">可以先這樣做</h2>
+            <div class="relief-grid">
+              <div class="relief-card"><span class="item-no">01</span><h3 class="relief-name">暫停螢幕工作</h3><p class="relief-how">離開電腦，減少視覺刺激。</p></div>
+              <div class="relief-card"><span class="item-no">02</span><h3 class="relief-name">輕柔按摩</h3><p class="relief-how">輕按太陽穴及眉毛周圍，避免直接壓迫眼球。</p></div>
+              <div class="relief-card"><span class="item-no">03</span><h3 class="relief-name">補充水分</h3><p class="relief-how">適度喝水，避免脫水引起的不適。</p></div>
+              <div class="relief-card"><span class="item-no">04</span><h3 class="relief-name">放鬆肩頸</h3><p class="relief-how">輕柔伸展肩頸，減少姿勢不良造成的肌肉緊繃。</p></div>
+            </div>
+          </div>
+          <div class="section-content" data-section="care">
+            <h2 class="content-label">平常就做的護眼習慣</h2>
+            <ul class="care-list">
+              <li><span class="item-no">01</span><p class="care-text">遵守 20-20-20 原則：每看螢幕 20 分鐘，看 20 英尺（約 6 公尺）遠處 20 秒。</p></li>
+              <li><span class="item-no">02</span><p class="care-text">有意識地增加眨眼頻率。</p></li>
+              <li><span class="item-no">03</span><p class="care-text">調整螢幕亮度，避免環境太暗或反光。</p></li>
+              <li><span class="item-no">04</span><p class="care-text">保持適當觀看距離，避免螢幕過近。</p></li>
+              <li><span class="item-no">05</span><p class="care-text">眼睛乾澀時，可考慮使用不含防腐劑的人工淚液。</p></li>
+            </ul>
+          </div>
+          <div class="section-content" data-section="warning">
+            <h2 class="content-label">以下情況不建議自行舒緩後繼續工作：</h2>
+            <div>
+              <div class="warning-head"><span>警訊</span><span>建議處理</span></div>
+              <ul class="warning-list">
+                <li><span class="item-no">01</span><p class="warn-text">頭痛反覆發生，影響工作與生活</p><span class="badge badge-check">安排檢查</span></li>
+                <li><span class="item-no">02</span><p class="warn-text">頭痛逐漸加劇或疼痛型態明顯改變</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">03</span><p class="warn-text">突發前所未有的劇烈頭痛</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">04</span><p class="warn-text">頭痛合併意識不清、抽搐或肢體無力</p><span class="badge badge-119">撥打 119</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== 症狀 5：畏光｜刺癢 ========== -->
+        <article class="symptom-content">
+          <div class="section-content" data-section="symptoms">
+            <h2 class="content-label">症狀描述</h2>
+            <p class="content-lead">遇到光線容易不適，眼睛有刺刺或灼熱感</p>
+            <div class="quick-look">
+              <button class="quick-card" type="button" data-goto="causes">
+                <span class="quick-top"><span class="quick-eyebrow">可能原因</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">乾眼或眼表受到刺激</span>
+              </button>
+              <button class="quick-card" type="button" data-goto="relief">
+                <span class="quick-top"><span class="quick-eyebrow">最快的舒緩</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">降低光線刺激</span>
+              </button>
+            </div>
+          </div>
+          <div class="section-content" data-section="causes">
+            <h2 class="content-label">為什麼會這樣？</h2>
+            <p class="content-lead">乾眼或眼表受到刺激</p>
+          </div>
+          <div class="section-content" data-section="relief">
+            <h2 class="content-label">可以先這樣做</h2>
+            <div class="relief-grid">
+              <div class="relief-card"><span class="item-no">01</span><h3 class="relief-name">降低光線刺激</h3><p class="relief-how">暫時調暗螢幕及周圍燈光。</p></div>
+              <div class="relief-card"><span class="item-no">02</span><h3 class="relief-name">閉眼休息</h3><p class="relief-how">暫時停止工作，讓眼睛遠離刺激。</p></div>
+              <div class="relief-card"><span class="item-no">03</span><h3 class="relief-name">人工淚液</h3><p class="relief-how">若伴隨乾澀，可使用不含防腐劑的人工淚液。</p></div>
+              <div class="relief-card"><span class="item-no">04</span><h3 class="relief-name">避免揉眼</h3><p class="relief-how">避免用手揉搓眼睛，以免加重刺激。</p></div>
+            </div>
+          </div>
+          <div class="section-content" data-section="care">
+            <h2 class="content-label">平常就做的護眼習慣</h2>
+            <ul class="care-list">
+              <li><span class="item-no">01</span><p class="care-text">遵守 20-20-20 原則：每看螢幕 20 分鐘，看 20 英尺（約 6 公尺）遠處 20 秒。</p></li>
+              <li><span class="item-no">02</span><p class="care-text">有意識地增加眨眼頻率。</p></li>
+              <li><span class="item-no">03</span><p class="care-text">調整螢幕亮度，避免環境太暗或反光。</p></li>
+              <li><span class="item-no">04</span><p class="care-text">保持適當觀看距離，避免螢幕過近。</p></li>
+              <li><span class="item-no">05</span><p class="care-text">眼睛乾澀時，可考慮使用不含防腐劑的人工淚液。</p></li>
+            </ul>
+          </div>
+          <div class="section-content" data-section="warning">
+            <h2 class="content-label">以下情況不建議自行舒緩後繼續工作：</h2>
+            <div>
+              <div class="warning-head"><span>警訊</span><span>建議處理</span></div>
+              <ul class="warning-list">
+                <li><span class="item-no">01</span><p class="warn-text">畏光、刺痛反覆出現或持續不退</p><span class="badge badge-check">安排檢查</span></li>
+                <li><span class="item-no">02</span><p class="warn-text">眼睛持續刺痛，伴隨明顯紅腫</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">03</span><p class="warn-text">畏光合併視力下降或劇烈眼痛</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">04</span><p class="warn-text">眼痛合併頭痛、噁心及視力模糊</p><span class="badge badge-doctor">立即就醫</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 右下角回首頁按鈕 -->
+  <a class="home-button" href="index.html" aria-label="回首頁">
+    <img class="icon-default" src="img/home-button-default.svg" alt="">
+    <img class="icon-hover" src="img/home-button-hover.svg" alt="">
+  </a>
+
+  <!-- 共用頁尾（之後每一頁都放同一份） -->
+  <footer class="site-foot">
+    <div class="site-foot-top">
+      <p class="site-foot-logo">FROGet</p>
+      <nav class="site-foot-links" aria-label="頁尾">
+        <div>
+          <p class="t-label">( 身體地圖 )</p>
+          <a href="eye-detail.html">眼睛</a>
+          <a href="organ-detail.html">內臟</a>
+          <a href="arm-detail.html">手臂</a>
+        </div>
+        <div>
+          <p class="t-label">( 網站 )</p>
+          <a href="index.html">首頁</a>
+          <a href="ask.html">問答</a>
+          <a href="shop.html">商店</a>
+          <a href="index.html#about">關於我們</a>
+        </div>
+      </nav>
+    </div>
+    <div class="site-foot-bottom">
+      <p>內容僅供健康知識參考，非醫療診斷；症狀持續或出現警訊請就醫。</p>
+      <p>FROGet to self-care © 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/detail.js"></script>
+  <script src="js/base.js"></script>
+</body>
+</html>
