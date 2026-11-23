@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>問答｜FROGet</title>
+  <!-- 分頁標題前的小圖：綠色玻璃青蛙頭 -->
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="apple-touch-icon" href="img/favicon-180.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Post+No+Bills+Colombo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 發光液態球：直接連結 liquid 資料夾的樣式 -->
+  <link rel="stylesheet" href="liquid/liquid.css">
+  <link rel="stylesheet" href="css/ask.css">
+</head>
+<body class="ask-page">
+
+  <!-- 導覽列 -->
+  <header class="nav">
+    <a class="logo" href="index.html">
+      <span class="logo-line1"><span class="logo-name">FROGet</span></span>
+    </a>
+    <nav class="menu">
+      <a href="ask.html">問答</a>
+      <a href="shop.html">商店</a>
+      <a href="game.html">解壓遊戲</a>
+      <a href="pill.html">不累不累丸</a>
+      <a class="cart-button" href="#">購物車 (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="ask-stage">
+    <!-- 液態球（結構與 liquid/index.html 相同） -->
+    <div class="ask-orb" aria-hidden="true">
+      <div class="orb-wrap" id="orb-wrap">
+        <div class="orb">
+          <div class="blob b1"></div>
+          <div class="blob b2"></div>
+          <div class="blob b3"></div>
+          <div class="blob b4"></div>
+          <div class="blob b5"></div>
+          <div class="wave w1"></div>
+          <div class="wave w2"></div>
+        </div>
+        <div class="glass"></div>
+      </div>
+    </div>
+
+    <!-- 輸入框：data-state 為 empty / typing / sending -->
+    <form class="ask-input" id="ask-input" data-state="empty">
+      <div class="ask-header">萬事解：諸事不順、小病小痛</div>
+      <textarea class="ask-text" id="ask-text" rows="1" placeholder="：您最近有什麼煩惱嗎？" aria-label="您最近有什麼煩惱嗎？"></textarea>
+      <div class="ask-footer">
+        <button class="ask-go" type="submit" aria-label="送出">
+          <img class="go-arrow" src="img/ask-arrow.svg" alt="">
+          <img class="go-typing" src="img/ask-go-typing.svg" alt="">
+          <img class="go-sending" src="img/ask-go-sending.svg" alt="">
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <script src="js/ask.js"></script>
+</body>
+</html>

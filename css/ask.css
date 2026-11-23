@@ -1,0 +1,147 @@
+/* ===== 問答頁（ask） ===== */
+/* 導覽列與顏色變數沿用 style.css；液態球樣式來自 liquid/liquid.css */
+
+/* 灰底＋上方 498px 淡綠漸層 */
+body.ask-page {
+  background:
+    linear-gradient(to bottom, #e7ffc4 0, rgba(255, 255, 255, 0) 498px) no-repeat,
+    var(--gray-100);
+}
+
+.ask-page .nav {
+  position: relative;
+  z-index: 2;
+}
+
+.ask-stage {
+  /* 球的直徑：設計稿 790px，小螢幕時跟著縮小 */
+  --ball: min(790px, 80vw);
+  position: relative;
+  min-height: 997px;
+  padding-bottom: 86px;
+  overflow: hidden; /* 光暈超出畫面的部分裁掉，避免出現橫向捲軸 */
+}
+
+/* 球水平置中，上緣在導覽列下方 66px */
+.ask-orb {
+  position: absolute;
+  top: 66px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 覆寫 liquid.css 的球尺寸 */
+.ask-orb .orb-wrap {
+  --size: var(--ball);
+}
+
+/* ----- 輸入框 ----- */
+.ask-input {
+  position: relative;
+  z-index: 1;
+  width: min(1146px, calc(100% - 32px));
+  min-height: 247px;
+  /* 蓋住球的下半部（設計稿：球頂往下 598px 處） */
+  margin: calc(66px + var(--ball) * 0.757) auto 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--ink-900);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+}
+
+.ask-header {
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--ink-900);
+  background: var(--lime-100);
+  font-size: var(--fs-20);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-title);
+}
+
+.ask-text {
+  flex: 1 0 auto;
+  width: 100%;
+  min-height: 132px;
+  padding: 16px 24px;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--fs-20);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-body);
+  color: var(--ink-900);
+}
+
+.ask-text::placeholder {
+  color: var(--ink-600);
+}
+
+.ask-footer {
+  padding: 12px 12px 12px 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 送出鈕：預設白底圓框＋箭頭 */
+.ask-go {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ink-line);
+  border-radius: var(--radius-circle);
+  background: var(--white);
+  cursor: pointer;
+}
+
+.ask-go .go-arrow {
+  width: 15.5px;
+  height: 11.5px;
+}
+
+.ask-go .go-typing,
+.ask-go .go-sending {
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+
+/* 打字中：萊姆綠按鈕；送出：粉紅按鈕（圖本身含外框，所以拿掉按鈕的框） */
+.ask-input[data-state="typing"] .ask-go,
+.ask-input[data-state="sending"] .ask-go {
+  border: none;
+  background: none;
+}
+
+.ask-input[data-state="typing"] .go-arrow,
+.ask-input[data-state="sending"] .go-arrow {
+  display: none;
+}
+
+.ask-input[data-state="typing"] .go-typing {
+  display: block;
+}
+
+.ask-input[data-state="sending"] .go-sending {
+  display: block;
+}
+
+/* ===== 小螢幕調整 ===== */
+@media (max-width: 640px) {
+  .ask-stage {
+    min-height: 0;
+    padding-bottom: 32px;
+  }
+
+  .ask-header,
+  .ask-text {
+    font-size: var(--fs-16);
+  }
+}
