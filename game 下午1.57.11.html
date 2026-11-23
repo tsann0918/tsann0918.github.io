@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>解壓遊戲｜呼青蛙巴掌 - FROGet</title>
+    <!-- 分頁標題前的小圖：綠色玻璃青蛙頭 -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon-180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Post+No+Bills+Colombo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/game.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <!-- data-view：lobby 初始頁／play 遊戲中／result 結算（由 js/slapGame.js 切換） -->
+  <body class="theme-line game-page" data-view="lobby">
+    <!-- 導覽列（遊戲中會收起來） -->
+    <header class="nav">
+      <a class="logo" href="index.html">
+        <span class="logo-line1"><span class="logo-name">FROGet</span></span>
+      </a>
+      <nav class="menu">
+        <a href="ask.html">問答</a>
+        <a href="shop.html">商店</a>
+        <a href="game.html" aria-current="page">解壓遊戲</a>
+        <a href="pill.html">不累不累丸</a>
+        <a class="cart-button" href="#">購物車 (<span id="cart-count">0</span>)</a>
+      </nav>
+    </header>
+
+    <!-- ===== 初始頁 ===== -->
+    <main class="g-view g-lobby" id="lobby">
+      <section class="g-intro" aria-labelledby="game-title">
+        <div class="g-titlerow">
+          <!-- 會動的 3D 玻璃青蛙：轉頭看滑鼠，點牠會被打一下 -->
+          <div class="g-hero-frog" id="heroFrog" role="img" aria-label="3D 玻璃青蛙頭，點一下可以試打">
+            <span class="g-hero-tip">點我試打一下</span>
+          </div>
+          <h1 class="g-title" id="game-title" data-reveal="0.1">呼青蛙巴掌</h1>
+        </div>
+        <p class="g-desc" data-reveal="0.2">對著鏡頭把手橫著揮過青蛙，把痠痛轉給牠。打越多，青蛙的臉會腫起來，最後……被打到好開心。</p>
+        <ol class="g-steps">
+          <li class="line-draw" data-reveal="0.3"><span class="g-step-no">1</span><b>輸入名字</b><span>成績會記在排行榜上</span></li>
+          <li class="line-draw" data-reveal="0.4"><span class="g-step-no">2</span><b>手橫著揮過青蛙</b><span>揮越快，巴掌越大力</span></li>
+          <li class="line-draw" data-reveal="0.5"><span class="g-step-no">3</span><b>30 秒內一直打</b><span>連擊越多，分數倍數越高</span></li>
+        </ol>
+        <form class="g-start" id="startForm" novalidate data-reveal="0.6">
+          <input class="g-field" id="nameInput" type="text" maxlength="12" placeholder="輸入你的名字" autocomplete="off" aria-label="玩家名字" />
+          <button class="g-btn g-btn-dark" id="startBtn" type="submit">進入遊戲 →</button>
+        </form>
+        <p class="g-hint" id="nameHint" aria-live="polite"></p>
+      </section>
+
+      <section class="g-board" aria-labelledby="board-title">
+        <div class="g-board-head" data-reveal="0.1">
+          <h2 id="board-title">排行榜</h2>
+          <span class="g-board-info" id="boardInfo"></span>
+        </div>
+        <ol class="g-podium" id="podium" aria-label="前三名頒獎台"></ol>
+        <ol class="g-list" id="boardList" start="4"></ol>
+        <p class="g-board-status" id="boardStatus"></p>
+      </section>
+    </main>
+
+    <!-- ===== 結算頁 ===== -->
+    <main class="g-view g-result" id="result">
+      <section class="g-res" aria-labelledby="res-title">
+        <p class="g-label" data-reveal="0">( 時間到 ) RESULT</p>
+        <h1 class="g-res-title" id="res-title" data-reveal="0.05"><span id="resName"></span>，這回合得分</h1>
+        <div class="g-res-hero">
+          <p class="g-res-score"><span id="resScore">0</span></p>
+          <!-- 這一局最後的青蛙樣子（3D，點牠可以再打） -->
+          <div class="g-res-frog" id="resFrog" role="img" aria-label="這一局最後的青蛙"></div>
+        </div>
+        <dl class="g-res-stats line-draw" id="resStats">
+          <div><dt>( 01 ) 打中</dt><dd id="resHits">0 次</dd></div>
+          <div><dt>( 02 ) 最高連擊</dt><dd id="resCombo">0</dd></div>
+          <div><dt>( 03 ) 青蛙最後</dt><dd id="resStage">正常</dd></div>
+          <div><dt>( 04 ) 名次</dt><dd id="resRank">-</dd></div>
+        </dl>
+        <div class="g-reco" data-reveal="0.9">
+          <img src="img/game-frog-idle.png" alt="" />
+          <div>
+            <p class="g-label">( 推薦你 )</p>
+            <p class="g-reco-name" id="recoName"></p>
+            <p class="g-reco-desc" id="recoDesc"></p>
+          </div>
+          <a class="g-btn" id="recoLink" href="shop.html">去商店看看 ↗</a>
+        </div>
+        <div class="g-res-actions" data-reveal="1">
+          <button class="g-btn g-btn-dark" id="againBtn" type="button">再玩一次</button>
+          <button class="g-btn" id="nextBtn" type="button">換下一位玩家</button>
+        </div>
+      </section>
+
+      <section class="g-board g-board-compact" aria-labelledby="res-board-title">
+        <div class="g-board-head" data-reveal="0.2">
+          <h2 id="res-board-title">排行榜</h2>
+          <span class="g-board-info" id="resBoardInfo"></span>
+        </div>
+        <ol class="g-podium" id="resPodium" aria-label="前三名頒獎台"></ol>
+        <ol class="g-list" id="resList" start="4"></ol>
+      </section>
+    </main>
+
+    <!-- ===== 遊戲中（全螢幕） ===== -->
+    <div id="stage" data-tier="0" data-stage="1" aria-label="遊戲畫面">
+      <!-- 鏡頭畫面：只當 3D 背景的來源（畫在 3D 裡，玻璃青蛙才折射得到） -->
+      <video id="video" autoplay playsinline muted></video>
+      <div id="frog3d"></div>
+      <canvas id="overlay"></canvas>
+      <div id="fx"></div>
+      <div id="flash"></div>
+      <div id="banner"></div>
+      <div id="countdown" data-mode="start"></div>
+
+      <!-- 青蛙升階段的轉場 -->
+      <div id="stageIntro" hidden>
+        <div class="si-band"></div>
+        <div class="si-en">STAGE 2</div>
+        <div class="si-zh">臉腫起來了</div>
+        <div class="si-sub">繼續打，看看會怎樣</div>
+      </div>
+
+      <!-- 上排：玩家、青蛙階段、離開 -->
+      <div class="hud-top">
+        <div class="hud-pills">
+          <span class="hud-pill">玩家　<b id="playerName">-</b></span>
+          <span class="hud-pill hud-pill-lime" id="stagePill">( 01 ) 正常</span>
+        </div>
+        <button class="g-btn hud-exit" id="exitBtn" type="button">離開 ×</button>
+      </div>
+
+      <!-- 連擊 -->
+      <div class="hud-combo hidden" id="comboBox">
+        <p class="hud-cap">( COMBO )</p>
+        <p class="hud-combo-num" id="comboNum">0</p>
+        <p class="hud-combo-mult" id="comboMult">x1</p>
+        <div class="hud-combo-bar" id="comboBar"><span></span></div>
+      </div>
+
+      <!-- 分數、時間 -->
+      <div class="hud-score"><p class="hud-cap">( SCORE )</p><p class="hud-big" id="score">0</p></div>
+      <div class="hud-time"><p class="hud-cap">( TIME )</p><p class="hud-big" id="time">30</p></div>
+
+      <!-- 最底下：到下一階段的進度 -->
+      <div class="hud-progress"><span class="hud-progress-fill" id="stageBar"></span><span class="hud-progress-text" id="stageNum"></span></div>
+    </div>
+
+    <script src="js/base.js"></script>
+    <script type="module" src="js/slapGame.js"></script>
+  </body>
+</html>

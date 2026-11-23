@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>內臟｜FROGet</title>
+  <!-- 分頁標題前的小圖：綠色玻璃青蛙頭 -->
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="apple-touch-icon" href="img/favicon-180.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Post+No+Bills+Colombo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/detail.css">
+  <!-- 全站共用樣式（跟首頁同一套）＋詳細頁換裝 -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/detail-theme.css">
+</head>
+<body class="theme-line">
+
+  <!-- 導覽列 -->
+  <header class="nav">
+    <a class="logo" href="index.html">
+      <span class="logo-line1"><span class="logo-name">FROGet</span></span>
+    </a>
+    <nav class="menu">
+      <a href="ask.html">問答</a>
+      <a href="shop.html">商店</a>
+      <a href="game.html">解壓遊戲</a>
+      <a href="pill.html">不累不累丸</a>
+      <a class="cart-button" href="#">購物車 (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <!-- 頁面標題 -->
+  <div class="detail-head">
+    <p class="t-label" data-reveal>( 身體地圖 · 02 )</p>
+    <h1 class="t-display" data-reveal="0.08">內臟</h1>
+  </div>
+
+  <main class="detail">
+    <!-- 左側症狀選單 -->
+    <nav class="symptom-nav" aria-label="症狀" data-reveal="0.15">
+      <p class="t-label">( 5 種症狀 )</p>
+      <button class="symptom-nav-item" type="button">胃食道逆流</button>
+      <button class="symptom-nav-item" type="button">脹氣｜消化不良</button>
+      <button class="symptom-nav-item" type="button">便祕</button>
+      <button class="symptom-nav-item" type="button">心悸</button>
+      <button class="symptom-nav-item" type="button">痔瘡</button>
+    </nav>
+
+    <!-- 右側內容面板 -->
+    <section class="detail-panel line-draw" data-reveal="0.22">
+      <div class="panel-header" id="panel-header">
+        <h1 class="panel-title" id="panel-title">胃食道逆流</h1>
+      </div>
+
+      <div class="section-tabs" role="tablist">
+        <button class="tag" type="button" role="tab" data-section="symptoms">常見症狀</button>
+        <button class="tag" type="button" role="tab" data-section="causes">成因分析</button>
+        <button class="tag" type="button" role="tab" data-section="relief">舒緩方法</button>
+        <button class="tag" type="button" role="tab" data-section="care">日常保養</button>
+        <button class="tag tag-warning" type="button" role="tab" data-section="warning">就醫警訊</button>
+      </div>
+
+      <div class="panel-content">
+
+        <!-- ========== 症狀 1：胃食道逆流 ========== -->
+        <article class="symptom-content">
+          <div class="section-content" data-section="symptoms">
+            <h2 class="content-label">症狀描述</h2>
+            <p class="content-lead">胸口或喉嚨有酸液上湧、灼熱或酸苦感</p>
+            <div class="quick-look">
+              <button class="quick-card" type="button" data-goto="causes">
+                <span class="quick-top"><span class="quick-eyebrow">可能原因</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">熬夜、飲食不規律、吃飽後立即躺下</span>
+              </button>
+              <button class="quick-card" type="button" data-goto="relief">
+                <span class="quick-top"><span class="quick-eyebrow">最快的舒緩</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">保持直立</span>
+              </button>
+            </div>
+          </div>
+          <div class="section-content" data-section="causes">
+            <h2 class="content-label">為什麼會這樣？</h2>
+            <p class="content-lead">熬夜、飲食不規律、吃飽後立即躺下</p>
+          </div>
+          <div class="section-content has-note" data-section="relief">
+            <h2 class="content-label">可以先這樣做</h2>
+            <p class="content-note">以下是當下可以先做的應對，不能取代治療。</p>
+            <div class="relief-grid">
+              <div class="relief-card"><span class="item-no">01</span><h3 class="relief-name">保持直立</h3><p class="relief-how">停止工作後先坐直或站立，不要立即躺下。</p></div>
+              <div class="relief-card"><span class="item-no">02</span><h3 class="relief-name">鬆開衣物</h3><p class="relief-how">放鬆腰部過緊的褲頭或皮帶。</p></div>
+              <div class="relief-card"><span class="item-no">03</span><h3 class="relief-name">少量喝水</h3><p class="relief-how">小口飲用白開水，避免一次大量飲水。</p></div>
+              <div class="relief-card"><span class="item-no">04</span><h3 class="relief-name">暫停進食</h3><p class="relief-how">暫時避免咖啡、茶、辛辣及油膩食物。</p></div>
+              <div class="relief-card"><span class="item-no">05</span><h3 class="relief-name">適當使用制酸劑</h3><p class="relief-how">可詢問藥師是否適合使用制酸劑或藻酸鹽類藥物。</p></div>
+            </div>
+          </div>
+          <div class="section-content" data-section="care">
+            <h2 class="content-label">平常就做的保養習慣</h2>
+            <ul class="care-list">
+              <li><span class="item-no">01</span><p class="care-text">固定三餐時間，避免長時間空腹或暴飲暴食。</p></li>
+              <li><span class="item-no">02</span><p class="care-text">每坐 30～60 分鐘起身活動一下。</p></li>
+              <li><span class="item-no">03</span><p class="care-text">每天補充足夠水分與蔬菜、水果等膳食纖維。</p></li>
+              <li><span class="item-no">04</span><p class="care-text">避免吃飽後立即躺下，尤其容易胃食道逆流的人。</p></li>
+              <li><span class="item-no">05</span><p class="care-text">減少過量咖啡、刺激性食物及深夜宵夜。</p></li>
+              <li><span class="item-no">06</span><p class="care-text">保持規律作息，適度運動。</p></li>
+            </ul>
+          </div>
+          <div class="section-content" data-section="warning">
+            <h2 class="content-label">以下情況不建議自行舒緩後繼續工作：</h2>
+            <div>
+              <div class="warning-head"><span>警訊</span><span>建議處理</span></div>
+              <ul class="warning-list">
+                <li><span class="item-no">01</span><p class="warn-text">吞嚥困難或吞嚥疼痛。</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">02</span><p class="warn-text">持續嘔吐、吐血或黑便。</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">03</span><p class="warn-text">胸痛伴隨冒冷汗、呼吸困難。</p><span class="badge badge-119">撥打 119</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== 症狀 2：脹氣｜消化不良 ========== -->
+        <article class="symptom-content">
+          <div class="section-content" data-section="symptoms">
+            <h2 class="content-label">症狀描述</h2>
+            <p class="content-lead">腹部有脹滿、悶堵感，容易打嗝</p>
+            <div class="quick-look">
+              <button class="quick-card" type="button" data-goto="causes">
+                <span class="quick-top"><span class="quick-eyebrow">可能原因</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">吃飯太快、飲食不規律、久坐缺乏活動</span>
+              </button>
+              <button class="quick-card" type="button" data-goto="relief">
+                <span class="quick-top"><span class="quick-eyebrow">最快的舒緩</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">起身走動</span>
+              </button>
+            </div>
+          </div>
+          <div class="section-content" data-section="causes">
+            <h2 class="content-label">為什麼會這樣？</h2>
+            <p class="content-lead">吃飯太快、飲食不規律、久坐缺乏活動</p>
+          </div>
+          <div class="section-content has-note" data-section="relief">
+            <h2 class="content-label">可以先這樣做</h2>
+            <p class="content-note">以下是當下可以先做的應對，不能取代治療。</p>
+            <div class="relief-grid">
+              <div class="relief-card"><span class="item-no">01</span><h3 class="relief-name">起身走動</h3><p class="relief-how">輕鬆散步 10～15 分鐘，幫助腸胃蠕動。</p></div>
+              <div class="relief-card"><span class="item-no">02</span><h3 class="relief-name">少量飲水</h3><p class="relief-how">小口喝水，避免短時間大量飲用。</p></div>
+              <div class="relief-card"><span class="item-no">03</span><h3 class="relief-name">腹部放鬆</h3><p class="relief-how">避免壓迫腹部，穿著寬鬆衣物。</p></div>
+              <div class="relief-card"><span class="item-no">04</span><h3 class="relief-name">暫停刺激食物</h3><p class="relief-how">暫時避免碳酸飲料、油膩食物及容易產氣的食物。</p></div>
+              <div class="relief-card"><span class="item-no">05</span><h3 class="relief-name">放慢進食速度</h3><p class="relief-how">避免狼吞虎嚥，減少吞入過多空氣。</p></div>
+            </div>
+          </div>
+          <div class="section-content" data-section="care">
+            <h2 class="content-label">平常就做的保養習慣</h2>
+            <ul class="care-list">
+              <li><span class="item-no">01</span><p class="care-text">固定三餐時間，避免長時間空腹或暴飲暴食。</p></li>
+              <li><span class="item-no">02</span><p class="care-text">每坐 30～60 分鐘起身活動一下。</p></li>
+              <li><span class="item-no">03</span><p class="care-text">每天補充足夠水分與蔬菜、水果等膳食纖維。</p></li>
+              <li><span class="item-no">04</span><p class="care-text">避免吃飽後立即躺下，尤其容易胃食道逆流的人。</p></li>
+              <li><span class="item-no">05</span><p class="care-text">減少過量咖啡、刺激性食物及深夜宵夜。</p></li>
+              <li><span class="item-no">06</span><p class="care-text">保持規律作息，適度運動。</p></li>
+            </ul>
+          </div>
+          <div class="section-content" data-section="warning">
+            <h2 class="content-label">以下情況不建議自行舒緩後繼續工作：</h2>
+            <div>
+              <div class="warning-head"><span>警訊</span><span>建議處理</span></div>
+              <ul class="warning-list">
+                <li><span class="item-no">01</span><p class="warn-text">腹部劇烈疼痛或持續脹痛。</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">02</span><p class="warn-text">腹脹伴隨持續嘔吐。</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">03</span><p class="warn-text">無法排便或排氣，且腹部明顯脹大。</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">04</span><p class="warn-text">出現血便或黑便。</p><span class="badge badge-doctor">立即就醫</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== 症狀 3：便祕 ========== -->
+        <article class="symptom-content">
+          <div class="section-content" data-section="symptoms">
+            <h2 class="content-label">症狀描述</h2>
+            <p class="content-lead">排便次數減少，糞便乾硬，排便費力</p>
+            <div class="quick-look">
+              <button class="quick-card" type="button" data-goto="causes">
+                <span class="quick-top"><span class="quick-eyebrow">可能原因</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">久坐、缺乏運動、喝水不足、膳食纖維不足</span>
+              </button>
+              <button class="quick-card" type="button" data-goto="relief">
+                <span class="quick-top"><span class="quick-eyebrow">最快的舒緩</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">補充水分</span>
+              </button>
+            </div>
+          </div>
+          <div class="section-content" data-section="causes">
+            <h2 class="content-label">為什麼會這樣？</h2>
+            <p class="content-lead">久坐、缺乏運動、喝水不足、膳食纖維不足</p>
+          </div>
+          <div class="section-content has-note" data-section="relief">
+            <h2 class="content-label">可以先這樣做</h2>
+            <p class="content-note">以下是當下可以先做的應對，不能取代治療。</p>
+            <div class="relief-grid">
+              <div class="relief-card"><span class="item-no">01</span><h3 class="relief-name">補充水分</h3><p class="relief-how">適量喝水，避免身體缺水。</p></div>
+              <div class="relief-card"><span class="item-no">02</span><h3 class="relief-name">適度活動</h3><p class="relief-how">起身散步，減少長時間久坐。</p></div>
+              <div class="relief-card"><span class="item-no">03</span><h3 class="relief-name">調整姿勢</h3><p class="relief-how">如廁時可使用小腳凳墊高雙腳，讓膝蓋略高於臀部。</p></div>
+              <div class="relief-card"><span class="item-no">04</span><h3 class="relief-name">不要憋便</h3><p class="relief-how">有便意時盡量及時如廁。</p></div>
+              <div class="relief-card"><span class="item-no">05</span><h3 class="relief-name">避免用力</h3><p class="relief-how">不要長時間蹲坐或過度用力排便。</p></div>
+            </div>
+          </div>
+          <div class="section-content" data-section="care">
+            <h2 class="content-label">平常就做的保養習慣</h2>
+            <ul class="care-list">
+              <li><span class="item-no">01</span><p class="care-text">固定三餐時間，避免長時間空腹或暴飲暴食。</p></li>
+              <li><span class="item-no">02</span><p class="care-text">每坐 30～60 分鐘起身活動一下。</p></li>
+              <li><span class="item-no">03</span><p class="care-text">每天補充足夠水分與蔬菜、水果等膳食纖維。</p></li>
+              <li><span class="item-no">04</span><p class="care-text">避免吃飽後立即躺下，尤其容易胃食道逆流的人。</p></li>
+              <li><span class="item-no">05</span><p class="care-text">減少過量咖啡、刺激性食物及深夜宵夜。</p></li>
+              <li><span class="item-no">06</span><p class="care-text">保持規律作息，適度運動。</p></li>
+            </ul>
+          </div>
+          <div class="section-content" data-section="warning">
+            <h2 class="content-label">以下情況不建議自行舒緩後繼續工作：</h2>
+            <div>
+              <div class="warning-head"><span>警訊</span><span>建議處理</span></div>
+              <ul class="warning-list">
+                <li><span class="item-no">01</span><p class="warn-text">便祕持續不改善或反覆發生。</p><span class="badge badge-check">安排檢查</span></li>
+                <li><span class="item-no">02</span><p class="warn-text">伴隨血便、體重不明原因下降。</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">03</span><p class="warn-text">出現劇烈腹痛、嘔吐或無法排氣。</p><span class="badge badge-doctor">立即就醫</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== 症狀 4：心悸 ========== -->
+        <article class="symptom-content">
+          <div class="section-content" data-section="symptoms">
+            <h2 class="content-label">症狀描述</h2>
+            <p class="content-lead">感覺心跳突然加快、變重或不規則跳動</p>
+            <div class="quick-look">
+              <button class="quick-card" type="button" data-goto="causes">
+                <span class="quick-top"><span class="quick-eyebrow">可能原因</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">長時間熬夜、睡眠不足</span>
+              </button>
+              <button class="quick-card" type="button" data-goto="relief">
+                <span class="quick-top"><span class="quick-eyebrow">最快的舒緩</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">暫停工作，坐下來休息</span>
+              </button>
+            </div>
+          </div>
+          <div class="section-content" data-section="causes">
+            <h2 class="content-label">為什麼會這樣？</h2>
+            <ul class="care-list">
+              <li><span class="item-no">01</span><p class="care-text">長時間熬夜、睡眠不足。</p></li>
+              <li><span class="item-no">02</span><p class="care-text">工作壓力大、情緒緊繃。</p></li>
+              <li><span class="item-no">03</span><p class="care-text">咖啡、濃茶等咖啡因攝取過量。</p></li>
+              <li><span class="item-no">04</span><p class="care-text">心律不整或其他心臟問題。</p></li>
+            </ul>
+          </div>
+          <div class="section-content has-note" data-section="relief">
+            <h2 class="content-label">可以先這樣做</h2>
+            <p class="content-note">以下是當下可以先做的應對，不能取代治療。</p>
+            <div class="relief-grid">
+              <div class="relief-card"><span class="item-no">01</span><h3 class="relief-name">暫停工作，坐下來休息。</h3></div>
+              <div class="relief-card"><span class="item-no">02</span><h3 class="relief-name">緩慢、自然地調整呼吸。</h3></div>
+              <div class="relief-card"><span class="item-no">03</span><h3 class="relief-name">暫時停止攝取咖啡因。</h3></div>
+              <div class="relief-card"><span class="item-no">04</span><h3 class="relief-name">記錄心悸發生的時間、持續多久及當時活動。</h3></div>
+            </div>
+          </div>
+          <div class="section-content" data-section="care">
+            <h2 class="content-label">平常就做的保養習慣</h2>
+            <ul class="care-list">
+              <li><span class="item-no">01</span><p class="care-text">固定三餐時間，避免長時間空腹或暴飲暴食。</p></li>
+              <li><span class="item-no">02</span><p class="care-text">每坐 30～60 分鐘起身活動一下。</p></li>
+              <li><span class="item-no">03</span><p class="care-text">每天補充足夠水分與蔬菜、水果等膳食纖維。</p></li>
+              <li><span class="item-no">04</span><p class="care-text">避免吃飽後立即躺下，尤其容易胃食道逆流的人。</p></li>
+              <li><span class="item-no">05</span><p class="care-text">減少過量咖啡、刺激性食物及深夜宵夜。</p></li>
+              <li><span class="item-no">06</span><p class="care-text">保持規律作息，適度運動。</p></li>
+            </ul>
+          </div>
+          <div class="section-content" data-section="warning">
+            <h2 class="content-label">以下情況不建議自行舒緩後繼續工作：</h2>
+            <div>
+              <div class="warning-head"><span>警訊</span><span>建議處理</span></div>
+              <ul class="warning-list">
+                <li><span class="item-no">01</span><p class="warn-text">心悸反覆發生或持續數分鐘以上。</p><span class="badge badge-check">安排檢查</span></li>
+                <li><span class="item-no">02</span><p class="warn-text">心悸伴隨頭暈、呼吸困難。</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">03</span><p class="warn-text">心悸伴隨胸痛、昏厥或快要昏倒。</p><span class="badge badge-119">撥打 119</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== 症狀 5：痔瘡 ========== -->
+        <article class="symptom-content">
+          <div class="section-content" data-section="symptoms">
+            <h2 class="content-label">症狀描述</h2>
+            <p class="content-lead">肛門周圍有腫脹、搔癢、疼痛或異物感</p>
+            <div class="quick-look">
+              <button class="quick-card" type="button" data-goto="causes">
+                <span class="quick-top"><span class="quick-eyebrow">可能原因</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">長時間坐著、排便用力、便祕</span>
+              </button>
+              <button class="quick-card" type="button" data-goto="relief">
+                <span class="quick-top"><span class="quick-eyebrow">最快的舒緩</span><span class="quick-more">看更多 →</span></span>
+                <span class="quick-title">溫水坐浴</span>
+              </button>
+            </div>
+          </div>
+          <div class="section-content" data-section="causes">
+            <h2 class="content-label">為什麼會這樣？</h2>
+            <p class="content-lead">長時間坐著、排便用力、便祕</p>
+          </div>
+          <div class="section-content has-note" data-section="relief">
+            <h2 class="content-label">可以先這樣做</h2>
+            <p class="content-note">以下是當下可以先做的應對，不能取代治療。</p>
+            <div class="relief-grid">
+              <div class="relief-card"><span class="item-no">01</span><h3 class="relief-name">溫水坐浴</h3><p class="relief-how">使用溫水浸泡肛門周圍約 10～15 分鐘。</p></div>
+              <div class="relief-card"><span class="item-no">02</span><h3 class="relief-name">冰敷緩解</h3><p class="relief-how">用毛巾包裹冰袋短暫冰敷，減輕腫脹不適。</p></div>
+              <div class="relief-card"><span class="item-no">03</span><h3 class="relief-name">溫和清潔</h3><p class="relief-how">排便後以清水清潔，避免過度摩擦。</p></div>
+              <div class="relief-card"><span class="item-no">04</span><h3 class="relief-name">避免久坐</h3><p class="relief-how">工作一段時間就起身活動。</p></div>
+              <div class="relief-card"><span class="item-no">05</span><h3 class="relief-name">減少排便用力</h3><p class="relief-how">補充水分及膳食纖維，避免便祕。</p></div>
+            </div>
+          </div>
+          <div class="section-content" data-section="care">
+            <h2 class="content-label">平常就做的保養習慣</h2>
+            <ul class="care-list">
+              <li><span class="item-no">01</span><p class="care-text">固定三餐時間，避免長時間空腹或暴飲暴食。</p></li>
+              <li><span class="item-no">02</span><p class="care-text">每坐 30～60 分鐘起身活動一下。</p></li>
+              <li><span class="item-no">03</span><p class="care-text">每天補充足夠水分與蔬菜、水果等膳食纖維。</p></li>
+              <li><span class="item-no">04</span><p class="care-text">避免吃飽後立即躺下，尤其容易胃食道逆流的人。</p></li>
+              <li><span class="item-no">05</span><p class="care-text">減少過量咖啡、刺激性食物及深夜宵夜。</p></li>
+              <li><span class="item-no">06</span><p class="care-text">保持規律作息，適度運動。</p></li>
+            </ul>
+          </div>
+          <div class="section-content" data-section="warning">
+            <h2 class="content-label">以下情況不建議自行舒緩後繼續工作：</h2>
+            <div>
+              <div class="warning-head"><span>警訊</span><span>建議處理</span></div>
+              <ul class="warning-list">
+                <li><span class="item-no">01</span><p class="warn-text">反覆出血或大量出血。</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">02</span><p class="warn-text">肛門疼痛劇烈或出現明顯腫塊。</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">03</span><p class="warn-text">出現黑便、頭暈或虛弱。</p><span class="badge badge-doctor">立即就醫</span></li>
+                <li><span class="item-no">04</span><p class="warn-text">症狀持續不改善。</p><span class="badge badge-check">安排檢查</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 右下角回首頁按鈕 -->
+  <a class="home-button" href="index.html" aria-label="回首頁">
+    <img class="icon-default" src="img/home-button-default.svg" alt="">
+    <img class="icon-hover" src="img/home-button-hover.svg" alt="">
+  </a>
+
+  <!-- 共用頁尾（之後每一頁都放同一份） -->
+  <footer class="site-foot">
+    <div class="site-foot-top">
+      <p class="site-foot-logo">FROGet</p>
+      <nav class="site-foot-links" aria-label="頁尾">
+        <div>
+          <p class="t-label">( 身體地圖 )</p>
+          <a href="eye-detail.html">眼睛</a>
+          <a href="organ-detail.html">內臟</a>
+          <a href="arm-detail.html">手臂</a>
+        </div>
+        <div>
+          <p class="t-label">( 網站 )</p>
+          <a href="index.html">首頁</a>
+          <a href="ask.html">問答</a>
+          <a href="shop.html">商店</a>
+          <a href="pill.html">不累不累丸</a>
+        </div>
+      </nav>
+    </div>
+    <div class="site-foot-bottom">
+      <p>內容僅供健康知識參考，非醫療診斷；症狀持續或出現警訊請就醫。</p>
+      <p>FROGet to self-care © 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/detail.js"></script>
+  <script src="js/base.js"></script>
+</body>
+</html>
